@@ -1,0 +1,476 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+/* Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* ከጫፍ እስከ ጫፍ እንዲዘረጋ */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px; /* የጎን padding መጠን በመጨመር ውብ እንዲሆን */
+    
+    /* Liquid Glass (Glassmorphism) Effect */
+    background: rgba(255, 255, 255, 0.65); /* ከፊል ግልጽነት ያለው ነጭ ከለር */
+    backdrop-filter: blur(12px); /* የብርጭቆ ብዥታ ውጤት */
+    -webkit-backdrop-filter: blur(12px); /* ለሳፋሪ ብራውዘር ድጋፍ */
+    
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* ከታች ቀጭን አንጸባራቂ መስመር */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.08); /* ለስላሳ ጥላ */
+    z-index: 1000; /* ከሌሎች ይዘቶች በላይ እንዲታይ */
+    box-sizing: border-box;
+}
+
+.nav-brand {
+    font-size: 22px;
+    font-weight: bold;
+    color: #e63946;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.nav-links li {
+    margin: 0 15px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 600;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+.nav-links a:hover {
+    color: #e63946;
+}
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+}
+.btn-primary-outline {
+    border: 1px solid #e63946;
+    color: #e63946;
+    padding: 8px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+.btn-primary {
+    background-color: #e63946;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+/* Hero Section (እንደ ፎቶው አቀማመጥ) */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 80px;
+    background-color: #ffffff;
+    max-width: 1550px;
+    margin-top: 120px;
+    min-height: 80vh;
+}
+.hero-content {
+    max-width: 550px;
+}
+.hero-subtitle {
+    color: #e63946;
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.hero-content h1 {
+    font-family: 'Poppins', 'Inter', sans-serif;
+    font-size: 68px;
+    font-weight: 700;
+    color: #0066cc;
+    text-shadow: 0 0 10px rgba(0, 102, 204, 0.6),
+                 0 0 20px rgba(0, 102, 204, 0.4),
+                 0 0 30px rgba(0, 102, 204, 0.3),
+                 0 0 40px rgba(0, 102, 204, 0.2);
+    margin: 20px 0;
+    line-height: 1.0;
+}
+.hero-content p {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.0;
+}
+.hero-btns {
+    display: flex;
+    gap: 10px;
+}
+.btn-red {
+    background-color: #e63946;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.btn-outline {
+    border: 1px solid #ccc;
+    color: #333;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 500px; /* ሳጥኑ የሚኖረውን ከፍተኛ ስፋት ይወስናል */
+    height: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.team-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.image-box {
+    font-size: 20px;
+    font-weight: bold;
+    color: #555;
+}
+/* Container for sections */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fdfdfd;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    text-align: center;
+}
+h2 {
+    color: #0077b6;
+    margin-top: 30px;
+    font-size: 24px;
+}
+.about-section p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
+}
+.services-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+.services-list li {
+    background: #ffffff;
+    margin: 12px auto;
+    padding: 15px;
+    border-radius: 6px;
+    border-left: 5px solid #e63946;
+    font-weight: bold;
+    color: #023047;
+    max-width: 500px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.contact-section {
+    background: #fff5f5;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+    border: 1px dashed #e63946;
+}
+.contact-section p {
+    font-size: 16px;
+    color: #333;
+    margin: 8px 0;
+}
+.nav-brand {
+    display: flex;
+    align-items: center;
+}
+.logo-img {
+    height: 200px; /* የሎጎውን ቁመት እንደ ፍላጎትዎ ማስተካከል ይችላሉ */
+    width: auto;
+    object-fit: contain;
+}
+/* የሄደሩን ቁመና ልክ እንደ ምሳሌው ማሳጠር */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5% !important; /* ከላይ እና ከታች ያለውን ውፍረት ይቀንሰዋል */
+    box-sizing: border-box;
+}
+
+/* የሎጎውን ምስል ቁመት መቆጣጠር (እንዳይሰፋ) */
+header img, .logo-img {
+    height: 75px !important; /* የሎጎውን ቁመት ያስተካክላል */
+    width: auto;
+}
+/* ዋናው ይዘት ከሄደሩ በታች ተስተካክሎ እንዲጀምር */
+body {
+    padding-top: 10px !important; /* ሄደሩ አጭር ስለሚሆን የሚሰጠው ክፍተት ይቀንሳል */
+}
+/* የሐኪሙን ፎቶ መያዣ ክፍል (Hero Image) ስፋት እና ቁመት መጨመር */
+.hero-image {
+    width: 90% !important;   /* የገጹን ስፋት በስፋት እንዲይዝ */
+    height: 500px !important;  /* ቁመቱን እንደ ናሙናው ከፍ ማድረግ */
+    max-width: none !important;
+    overflow: hidden;
+    border-radius: 12px;     /* የጥግ ቅርጹን ለማስተካከል (ከተፈለገ 0 ማድረግ ይቻላል) */
+}
+/* ፎቶው በሳጥኑ ውስጥ በትክክል እንዲሞላ */
+.hero-image img {
+    width: 110% !important;
+    height: 70% !important;
+    object-fit: cover !important; /* ፎቶው ሳይዛባ ሳጥኑን እንዲሞላ ያደርጋል */
+}
+
+/* 1. የናቪጌሽን ሊንኮች እንደ ሊኩዊድ ግላስ ቁልፍ እንዲሆኑ */
+.nav-links {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links li a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 50px;
+    
+    /* Liquid Glass Blue Tint & Blur */
+    background: rgba(0, 102, 204, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    
+    /* Glossy Borders & Shadows */
+    border: 1px solid rgba(0, 102, 204, 0.3);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.8), 
+                inset 0 -1px 2px rgba(0, 102, 204, 0.15), 
+                0 4px 12px rgba(0, 102, 204, 0.08);
+                
+    color: #0066cc; /* Max text glow blue */
+    transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background: rgba(0, 102, 204, 0.18);
+    transform: translateY(-2px);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.9), 
+                inset 0 -1px 2px rgba(0, 102, 204, 0.25), 
+                0 6px 16px rgba(0, 102, 204, 0.15);
+}
+
+/* 2. የናቪጌሽን ቁልፎች (Book an Appointment & Direction) */
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-buttons a, 
+.hero-btns a, 
+.btn-primary, .btn-outline, .btn-red, .btn-primary-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 22px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 50px;
+    
+    /* 3D Liquid Glass Blue Style */
+    background: rgba(0, 102, 204, 0.12);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    
+    border: 1px solid rgba(0, 102, 204, 0.4);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.9), 
+                inset 0 -1px 2px rgba(0, 102, 204, 0.2), 
+                0 6px 16px rgba(0, 102, 204, 0.1);
+                
+    color: #0066cc;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.nav-buttons a:hover, 
+.hero-btns a:hover, 
+.btn-primary:hover, .btn-outline:hover, .btn-red:hover, .btn-primary-outline:hover {
+    background: rgba(0, 102, 204, 0.25);
+    transform: translateY(-2px);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 1), 
+                inset 0 -1px 2px rgba(0, 102, 204, 0.3), 
+                0 10px 20px rgba(0, 102, 204, 0.18);
+}
+
+.floating-call-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #ff3b30; /* ውብ ቀይ ከለር */
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 20px rgba(255, 59, 48, 0.4);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.floating-call-btn:hover {
+    transform: scale(1.1); /* አይጥ ሲነካው ትንሽ እንዲሰፋ ያደርጋል */
+    box-shadow: 0 8px 25px rgba(255, 59, 48, 0.6);
+    background-color: #ffbc02;
+}
+
+/* Footer Styles */
+.site-footer {
+    background-color: #111111;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 80px;
+    position: relative;
+}
+
+/* CTA Banner */
+.footer-cta {
+    background-color: #ff7300; /* እንደ ምሳሌው ቀይ ከለር (ወይም የክሊኒኩን ሰማያዊ ከለር ማድረግ ትችላለህ) */
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.cta-button {
+    background-color: #ffffff;
+    color: #ff3b30;
+    padding: 14px 35px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-2px);
+}
+
+/* Footer Content Grid */
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px 40px 20px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+    gap: 40px;
+}
+
+.footer-col h3 {
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.footer-logo {
+    width: 120px;
+    background: #ffffff;
+    padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.footer-brand p, .footer-col p {
+    font-size: 14px;
+    color: #b0b0b0;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+    color: #b0b0b0;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #888888;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
